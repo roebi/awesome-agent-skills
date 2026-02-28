@@ -82,11 +82,10 @@ jobs:
             --weak-model openai/gpt-4o \
             --read "$SKILL_CONTEXT" \
             README.md \
-            --message "You have the create-awesome-readme skill available in context.
-              Review the generated README.md against the skill instructions.
-              Fix any formatting issues, ensure awesome-list conventions are followed,
-              and improve any descriptions that are unclear.
-              Do not change the data — only improve presentation." \
+            --message "For each repository entry in README.md that has an empty or
+              generic description (e.g. "No description"), look up the
+              repository name and write a one-line description based on
+              the repo name and its labels. Do not change anything else." \
             --yes \
             --no-auto-commits
 
