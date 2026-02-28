@@ -11,10 +11,10 @@ on:
         default: 'agent-skills'
       max_repos:
         description: 'Maximum repositories to process'
-        default: '5'
+        default: '40'
       min_stars:
         description: 'Minimum star count filter'
-        default: '123'
+        default: '3'
 
 jobs:
   update:
