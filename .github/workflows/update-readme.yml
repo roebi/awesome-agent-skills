@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      models: read
 
     steps:
       - name: Checkout awesome-agent-skills repo
@@ -77,6 +78,7 @@ jobs:
 
           aider \
             --model openai/gpt-4o-mini \
+            --weak-model openai/gpt-4o-mini \
             --read "$SKILL_CONTEXT" \
             --read /tmp/labeled.json \
             README.md \
