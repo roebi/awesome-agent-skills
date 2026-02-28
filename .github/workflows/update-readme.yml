@@ -78,8 +78,8 @@ jobs:
           SKILL_CONTEXT=$(aider-skills tmpfile _skills/skills/)
 
           aider \
-            --model openai/gpt-4o-mini \
-            --weak-model openai/gpt-4o-mini \
+            --model openai/gpt-4o \
+            --weak-model openai/gpt-4o \
             --read "$SKILL_CONTEXT" \
             --read /tmp/labeled.json \
             README.md \
