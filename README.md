@@ -36,21 +36,21 @@
 
 *Repositories containing multiple Agent Skills.*
 
-- **[anthropics/skills](https://github.com/anthropics/skills)** — Public repository for Agent Skills ⭐ 79340 `Python` `has-references` 📚 `has-scripts` 📜 `spec-compliant` ✅ `no-license` 🔓
-- **[ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)** — A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows ⭐ 38704 `Python` `has-scripts` 📜 `multi-agent` 🌐 `spec-compliant` ✅ `no-license` 🔓
+- **[anthropics/skills](https://github.com/anthropics/skills)** — Public repository for Agent Skills ⭐ 79353 `Python` `has-references` 📚 `has-scripts` 📜 `spec-compliant` ✅ `no-license` 🔓
+- **[ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)** — A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows ⭐ 38711 `Python` `has-scripts` 📜 `multi-agent` 🌐 `spec-compliant` ✅ `no-license` 🔓
 - **[OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files)** — Claude Code skill implementing Manus-style persistent markdown planning — the workflow pattern behind the $2B acquisition. ⭐ 14796 `Python` `has-references` 📚 `has-scripts` 📜 `multi-agent` 🌐 `spec-compliant` ✅
 
 ## 🛠️ Skill Managers & Registries
 
 *Tools to discover, install, and manage Agent Skills.*
 
-- **[VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)** — The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞 ⭐ 22823
+- **[VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)** — The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞 ⭐ 22854
 
 ## 📋 Other Awesome Lists
 
 *Other curated lists about Agent Skills or related topics.*
 
-- **[hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code)** — A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic ⭐ 25516 `Python` `has-scripts` 📜 `multi-agent` 🌐
+- **[hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code)** — A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic ⭐ 25521 `Python` `has-scripts` 📜 `multi-agent` 🌐
 
 ---
 
