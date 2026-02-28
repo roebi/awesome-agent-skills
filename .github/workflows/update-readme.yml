@@ -70,12 +70,13 @@ jobs:
         # and prints its path — aider then reads it via --read at startup.
         # This is the correct integration pattern per roebi/aider-skills docs.
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_BASE: https://models.inference.ai.azure.com
+          OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
         run: |
           SKILL_CONTEXT=$(aider-skills tmpfile _skills/skills/)
 
           aider \
-            --model claude-sonnet-4-5 \
+            --model openai/gpt-4o-mini \
             --read "$SKILL_CONTEXT" \
             --read /tmp/labeled.json \
             README.md \
