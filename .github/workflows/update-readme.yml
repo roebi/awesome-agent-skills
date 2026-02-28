@@ -77,11 +77,13 @@ jobs:
         run: |
           SKILL_CONTEXT=$(aider-skills tmpfile _skills/skills/)
 
-          MSG='You have the create-awesome-readme skill available in context.
-              Look at each repository entry in README.md that has an empty description
-              or a description that is clearly just the repo name repeated.
-              For those entries only, write a short one-line description based on
-              the repository name, its labels, and its category section.
+          MSG='You have the create-awesome-readme skill loaded in context.
+              Read the skill instructions from the XML context file first.
+              Then look at each repository entry in README.md that has an empty
+              description or a description that is clearly just the repo name
+              repeated. For those entries only, write a short one-line description
+              based on the repository name, its labels, and its category section.
+              Follow the entry line format defined in the skill.
               Do not change any other lines, labels, stars, or structure.'
 
           aider \
