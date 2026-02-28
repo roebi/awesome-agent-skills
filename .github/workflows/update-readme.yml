@@ -1,0 +1,82 @@
+name: Update Awesome README
+
+on:
+  # Run every Monday at 06:00 UTC
+  schedule:
+    - cron: '0 6 * * 1'
+
+  # Allow manual runs with optional tag override
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'GitHub topic tag to search'
+        required: false
+        default: 'agent-skills'
+      max_repos:
+        description: 'Maximum repositories to process'
+        required: false
+        default: '5'
+      min_stars:
+        description: 'Minimum star count filter'
+        required: false
+        default: '1'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to commit README.md back
+
+    steps:
+      - name: Checkout awesome-agent-skills repo
+        uses: actions/checkout@v4
+
+      - name: Checkout agent-skills repo (for the skill)
+        uses: actions/checkout@v4
+        with:
+          repository: roebi/agent-skills
+          path: _skills
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Run create-awesome-readme skill via Claude Code
+        uses: anthropics/claude-code-action@beta
+        with:
+          prompt: |
+            You are running the `create-awesome-readme` Agent Skill.
+            Read the skill instructions at: _skills/skills/create-awesome-readme/SKILL.md
+
+            Then execute the full workflow:
+
+            1. Run the fetch script:
+               uv run _skills/skills/create-awesome-readme/scripts/fetch-topic-repos.py \
+                 --tag "${{ inputs.tag || 'agent-skills' }}" \
+                 --max ${{ inputs.max_repos || '200' }} \
+                 --min-stars ${{ inputs.min_stars || '0' }} \
+                 --output /tmp/repos.json
+
+            2. Run the analyze script:
+               uv run _skills/skills/create-awesome-readme/scripts/analyze-repos.py \
+                 --repos /tmp/repos.json \
+                 --output /tmp/labeled.json
+
+            3. Run the generate script:
+               uv run _skills/skills/create-awesome-readme/scripts/generate-readme.py \
+                 --labeled /tmp/labeled.json \
+                 --tag "${{ inputs.tag || 'agent-skills' }}" \
+                 --output README.md
+
+            4. Verify README.md looks correct and complete.
+            5. Stage, commit, and push README.md with message:
+               "chore: update awesome list [$(date +%Y-%m-%d)]"
+          allowed_tools: "Bash,Read,Write"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
