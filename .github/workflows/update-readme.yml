@@ -82,10 +82,12 @@ jobs:
             --weak-model openai/gpt-4o \
             --read "$SKILL_CONTEXT" \
             README.md \
-            --message "For each repository entry in README.md that has an empty or
-              generic description (e.g. "No description"), look up the
-              repository name and write a one-line description based on
-              the repo name and its labels. Do not change anything else." \
+            --message "You have the create-awesome-readme skill available in context.
+              Look at each repository entry in README.md that has an empty description
+              or a description that is clearly just the repo name repeated.
+              For those entries only, write a short one-line description based on
+              the repository name, its labels, and its category section.
+              Do not change any other lines, labels, stars, or structure." \
             --yes \
             --no-auto-commits
 
