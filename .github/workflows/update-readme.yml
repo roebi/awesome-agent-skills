@@ -19,7 +19,7 @@ on:
       min_stars:
         description: 'Minimum star count filter'
         required: false
-        default: '1'
+        default: '123'
 
 jobs:
   update-readme:
