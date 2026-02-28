@@ -5,17 +5,17 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-*Auto-generated · 6 repositories analyzed · Last updated: 2026-02-28*
+*Auto-generated · 7 repositories analyzed · Last updated: 2026-02-28*
 
 ## Summary
 
 | Category | Count |
 |----------|-------|
-| Skills & collections | 3 |
+| Skills & collections | 4 |
 | Integrations & managers | 1 |
 | Misleading / off-topic | 0 |
 | Security signals | 0 |
-| Total | 6 |
+| Total | 7 |
 
 ## Label Legend
 
@@ -36,15 +36,16 @@
 
 *Repositories containing multiple Agent Skills.*
 
-- **[anthropics/skills](https://github.com/anthropics/skills)** — Public repository for Agent Skills ⭐ 79359 `Python` `has-references` 📚 `has-scripts` 📜 `spec-compliant` ✅ `no-license` 🔓
-- **[ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)** — A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows ⭐ 38712 `Python` `has-scripts` 📜 `multi-agent` 🌐 `spec-compliant` ✅ `no-license` 🔓
-- **[OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files)** — Claude Code skill implementing Manus-style persistent markdown planning — the workflow pattern behind the $2B acquisition. ⭐ 14797 `Python` `has-references` 📚 `has-scripts` 📜 `multi-agent` 🌐 `spec-compliant` ✅
+- **[anthropics/skills](https://github.com/anthropics/skills)** — Public repository for Agent Skills ⭐ 79362 `Python` `has-references` 📚 `has-scripts` 📜 `spec-compliant` ✅ `no-license` 🔓
+- **[ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)** — A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows ⭐ 38715 `Python` `has-scripts` 📜 `multi-agent` 🌐 `spec-compliant` ✅ `no-license` 🔓
+- **[OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files)** — Claude Code skill implementing Manus-style persistent markdown planning — the workflow pattern behind the $2B acquisition. ⭐ 14798 `Python` `has-references` 📚 `has-scripts` 📜 `multi-agent` 🌐 `spec-compliant` ✅
+- **[K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)** — A set of ready to use Agent Skills for research, science, engineering, analysis, finance and writing. ⭐ 9757 `Python` `has-references` 📚 `has-scripts` 📜 `spec-compliant` ✅
 
 ## 🛠️ Skill Managers & Registries
 
 *Tools to discover, install, and manage Agent Skills.*
 
-- **[VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)** — The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞 ⭐ 22862
+- **[VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)** — The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞 ⭐ 22866
 
 ## 📋 Other Awesome Lists
 
