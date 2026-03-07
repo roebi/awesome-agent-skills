@@ -54,7 +54,7 @@ jobs:
         run: |
           uv run _skills/skills/create-awesome-readme/scripts/fetch-topic-repos.py \
             --tag "${{ inputs.tag || 'agent-skills' }}" \
-            --max ${{ inputs.max_repos || '200' }} \
+            --max ${{ inputs.max_repos || '40' }} \
             --min-stars ${{ inputs.min_stars || '0' }} \
             --output /tmp/repos.json
 
