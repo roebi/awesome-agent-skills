@@ -46,23 +46,23 @@ jobs:
 
       - name: Validate skill before running
         run: |
-          aider-skills validate _skills/skills/create-awesome-readme
+          aider-skills validate _skills/skills/create-awesome-readme-en
 
       - name: Run the three pipeline scripts directly
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          uv run _skills/skills/create-awesome-readme/scripts/fetch-topic-repos.py \
+          uv run _skills/skills/create-awesome-readme-en/scripts/fetch-topic-repos.py \
             --tag "${{ inputs.tag || 'agent-skills' }}" \
             --max ${{ inputs.max_repos || '40' }} \
             --min-stars ${{ inputs.min_stars || '0' }} \
             --output /tmp/repos.json
 
-          uv run _skills/skills/create-awesome-readme/scripts/analyze-repos.py \
+          uv run _skills/skills/create-awesome-readme-en/scripts/analyze-repos.py \
             --repos /tmp/repos.json \
             --output /tmp/labeled.json
 
-          uv run _skills/skills/create-awesome-readme/scripts/generate-readme.py \
+          uv run _skills/skills/create-awesome-readme-en/scripts/generate-readme.py \
             --labeled /tmp/labeled.json \
             --tag "${{ inputs.tag || 'agent-skills' }}" \
             --output README.md
@@ -77,7 +77,7 @@ jobs:
         run: |
           SKILL_CONTEXT=$(aider-skills tmpfile _skills/skills/)
 
-          MSG='You have the create-awesome-readme skill loaded in context.
+          MSG='You have the create-awesome-readme-en skill loaded in context.
               Read the skill instructions from the XML context file first.
               Then look at each repository entry in README.md that has an empty
               description or a description that is clearly just the repo name
